@@ -32,7 +32,7 @@ import {
     }
   
     const logoutHandler = () => {
-    //   onClose();
+      onClose();
     //   dispatch(logout());
         console.log("logout")
     };
