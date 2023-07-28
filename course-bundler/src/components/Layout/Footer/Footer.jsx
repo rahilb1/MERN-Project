@@ -11,13 +11,13 @@ const Footer = () => {
             <Heading fontFamily={'body'} size='sm' children="@Rahil_Budhwani" color={"yellow.400"}/>
         </VStack>
         <HStack spacing={['2','10']} justifyContent={'center'} color={'white'} fontSize='50'>
-            <a href='https://youtube.com' target={'_blank'}>
+            <a href='https://youtube.com' target={'blank'} rel="noreferrer">
                 <TiSocialYoutubeCircular/>
             </a>
-            <a href='https://instagram.com' target={'_blank'}>
+            <a href='https://instagram.com' target={'blank'} rel="noreferrer">
                 <TiSocialInstagramCircular/>
             </a>
-            <a href='https://github.com' target={'_blank'}>
+            <a href='https://github.com' target={'blank'} rel="noreferrer">
                 <DiGithub/>
             </a>
         </HStack>
