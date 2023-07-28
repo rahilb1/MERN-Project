@@ -7,6 +7,8 @@ const ResetPassword = () => {
 
   const params = useParams();
 
+  console.log(params.token)
+
   return (
     <Container py={"16"} h="90vh">
       <form>
