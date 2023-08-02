@@ -13,8 +13,6 @@ import {
   import { ColorModeSwitcher } from '../../../ColorModeSwitcher';
   import { RiDashboardFill, RiLogoutBoxLine, RiMenu5Fill } from 'react-icons/ri';
   import { Link } from 'react-router-dom';
-//   import { useDispatch } from 'react-redux';
-//   import { logout } from '../../../redux/actions/user';
   
   const LinkButton = ({ url = '/', title = 'Home', onClose }) => (
     <Link onClick={onClose} to={url}>
@@ -25,15 +23,13 @@ import {
   const Header = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
   
-    // const dispatch = useDispatch();
-    const isAuthenticated = false;
+    const isAuthenticated = true;
     const user = {
         role: "admin"
     }
   
     const logoutHandler = () => {
       onClose();
-    //   dispatch(logout());
         console.log("logout")
     };
   
@@ -43,11 +39,11 @@ import {
   
         <Button
           onClick={onOpen}
+          zIndex={'overlay'}
           colorScheme={'yellow'}
           width="12"
           height={'12'}
           rounded="full"
-          zIndex={'overlay'}
           position={'fixed'}
           top="6"
           left="6"
