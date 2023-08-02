@@ -11,18 +11,24 @@ import ResetPassword from './components/Auth/ResetPassword';
 import Contact from './components/Contact/Contact';
 import Request from './components/Request/Request';
 import About from './components/About/About';
-import Subscribe from './components/Payments/Subscribe'
+import Subscribe from './components/Payments/Subscribe';
 import NotFound from './components/Layout/NotFound/NotFound';
 import PaymentSuccess from './components/Payments/PaymentSuccess';
 import PaymentFail from './components/Payments/PaymentFail';
+import CoursePage from './components/CoursePage/CoursePage';
 
 function App() {
+  window.addEventListener('contextmenu', e => {
+    e.preventDefault();
+  });
+
   return (
     <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/course/:id" element={<CoursePage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/request" element={<Request />} />
         <Route path="/about" element={<About />} />
@@ -31,9 +37,9 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/resetpassword/:token" element={<ResetPassword />} />
         <Route path="/subscribe" element={<Subscribe />} />
-        <Route path="*" element={<NotFound/>} />
-        <Route path="/paymentsuccess" element={<PaymentSuccess/>} />
-        <Route path="/paymentfail" element={<PaymentFail/>} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+        <Route path="/paymentfail" element={<PaymentFail />} />
       </Routes>
       <Footer />
     </Router>
