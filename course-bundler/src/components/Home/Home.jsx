@@ -33,12 +33,12 @@ const Home = () => {
             alignItems={['center', 'flex-end']}
             spacing="8"
           >
-            <Heading children="LEARN FROM THE EXPERTS" size={'2xl'} />
+            <Heading children="Spark Works⚡️" size={'2xl'} />
             <Text
               fontSize={'2xl'}
               fontFamily="cursive"
               textAlign={['center', 'left']}
-              children="Find Valuable Content At Reasonable Price"
+              children="Learn from the Experts"
             />
             <Link to="/courses">
               <Button size={'lg'} colorScheme="yellow">
