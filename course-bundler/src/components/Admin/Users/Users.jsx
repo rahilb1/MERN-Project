@@ -90,11 +90,6 @@ function Row({ item, updateHandler, deleteButtonHandler}) {
       <Td>{item.name}</Td>
       <Td>{item.email}</Td>
       <Td>{item.role}</Td>
-      <Td>
-        {item.subscription && item.subscription.status === 'active'
-          ? 'Active'
-          : 'Not Active'}
-      </Td>
 
       <Td isNumeric>
         <HStack justifyContent={'flex-end'}>
